@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
     <title>Vanilla Weather</title>
 </head>
@@ -15,14 +15,19 @@
 
     <div class="container my-5 mx-auto">
 
-        <h1 class="text-muted text-center my-4">Vanilla Weather</h1>
+        <div class="colour-toggle">
+            <button class="btn btn-light light" onclick="toggleMode('styles.css', 1);">Light Mode</button>
+            <button class="btn btn-dark dark" onclick="toggleMode('darkstyles.css', 1);">Dark Mode</button>
+        </div>
+
+        <h1 class="text-muted-title text-center my-4">Vanilla Weather</h1>
     
         <form class="change-location my-4 text-center text-muted">
-          <label for="city">Enter Location for Weather Information</label>
+          <label class="title" for="city">Enter Location for Weather Information</label>
           <input type="text" name="city" class="form-control p-4">
         </form>
         
-        <div class="card shadow-lg rounded d-none">
+        <div class="card rounded d-none">
           <img src="https://via.placeholder.com/400x300" class="time card-img-top">
           <div class="icon bg-light mx-auto text-center">
             <img  src="" alt="">
@@ -41,5 +46,6 @@
 
     <script src="scripts/forecast.js"></script>
     <script src="scripts/app.js"></script>
+    <script type = "text/javascript" src="darkstyles.js"></script>
 </body>
 </html>
